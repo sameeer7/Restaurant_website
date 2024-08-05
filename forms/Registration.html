@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-md-3 ">
+
+            </div>
+
+            <div class="col-md-6">
+
+                <form class="form-group" name="registration" method="post" action="./password.html"
+                    onsubmit="return show()">
+                    <h1>Registration Form</h1>
+
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">First Name:</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="">Last Name:</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+
+                        </div>
+                    </div>
+
+                    <div class="row my-2">
+                        <div class="col-md-6">
+                            <label for="">Password</label>
+                            <input type="password" class="form-control" id="password" onfocus="dispPass()"
+                                onblur="verifyPass2()" placeholder="Enter the Password">
+                            <p id="pass"></p>
+
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="">Confirm Password</label>
+                            <input type="text" class="form-control" id="rePassword" onfocus="dispRepass()"
+                                onblur="verifyPass()" placeholder="Confirm Password">
+                            <p id="repass"></p>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">*Mobile Number</label>
+                            <input type="text" class="form-control" id="number" required maxlength="10"
+                                placeholder="mobile Number">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="">Courses</label>
+                            <select name="course" id="" class="form-control">
+                                <option value="">Java FS</option>
+                                <option value="">Python FS</option>
+                                <option value="">AI</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button class="my-2" type="submit">Submit</button>
+                    <p id="p1"></p>
+                </form>
+
+            </div>
+
+            <div class="col-md-3 "></div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+
+    function show() {
+        var firstName = document.getElementById("firstName").value;
+        var Password = document.getElementById("password").value;
+        var rePassword = document.getElementById("rePassword").value
+
+        if ((firstName == "" || Password == "" || rePassword == "") || (!(Password == rePassword))) {
+            document.getElementById("p1").innerHTML = "Enter Mandatory Fields"
+            document.getElementById("p1").style.color = "red";
+            return false;
+
+        } else {
+            return true;
+        }
+    }
+
+    function dispPass() {
+        document.getElementById("pass").innerHTML = "PASSWORD MUST BE CHARACTERS"
+    }
+
+    function dispRepass() {
+        document.getElementById("repass").innerHTML = "Re-PASSWORD MUST BE CHARACTERS"
+    }
+
+    function verifyPass2() {
+        document.getElementById("pass").innerHTML = ""
+    }
+
+
+
+    function verifyPass() {
+        var pass1 = document.getElementById("password").value
+        var repass1 = document.getElementById("rePassword").value
+        if (pass1 === repass1) {
+
+            document.getElementById("repass").innerHTML = "Password and Re-password are Matched"
+
+            document.getElementById("repass").style.color = "green"
+            document.getElementById("rePassword").style.border = "2px solid green"
+
+        } else {
+
+            document.getElementById("repass").innerHTML = "Password and Re-password Not Matched"
+
+            document.getElementById("repass").style.color = "red"
+        }
+    }
+
+
+
+
+
+
+    document.getElementById("number").addEventListener("keypress", num1);
+
+    function num1(event) {
+        var num = event.which;
+
+        if (!(num >= 48 && num <= 56)) {
+            event.preventDefault();
+        }
+    }
+
+    document.getElementById("firstName").addEventListener("keypress", characters)
+
+    function characters(event) {
+        var chars = event.which;
+
+        if (!(chars >= 65 && chars <= 90 || chars >= 97 && chars <= 122)) {
+            event.preventDefault();
+        }
+
+    }
+
+</script>
+
+</html>

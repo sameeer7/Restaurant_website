@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Rubik+Mono+One&display=swap'); */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.menu-icon{
+    font-size: 1.5rem;
+    color: #fff;
+    display: none;
+    
+}
+
+.hero-left{
+   text-align: center;
+}
+
+.hero-left2{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+#hero-banner-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#hero-section{
+    
+    /* justify-content: center; */
+    padding: 30px;
+    /* align-items: center; */
+}
+
+
+
+.hero-banner{
+   
+   height: 100%;
+   width: 90%;
+  
+   
+
+}
+
+.img{
+    height: 700px;
+    background-image: cover;
+
+}
+
+.img1{
+   height: 100%;
+   width: 100%;
+  
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 20px;
+}
+#mynav-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:15px
+}
+::selection{
+    background-color: orange;
+    color: white;
+}
+
+#mynav-items a:hover{
+    color: orange;
+}
+
+#mynav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-image: url(./images/hero-bg.jpg);
+    padding: 5px;
+    
+}
+ 
+.main-con{
+    background-image: url("./images/hero-bg.jpg");
+    background-size: cover;
+    /* position: relative; */
+}
+
+.nav-icon{
+    display: flex;
+    align-items: center;
+    /* padding: 10px; */
+    color:#f1d6c6;
+}
+
+ul li a {
+    color: #ccc;
+    font-weight: bold;
+}
+
+.logo-name{
+    color:white;
+}
+
+.dot{
+    color: orange;
+    font-size: 3rem;
+
+}
+
+a i{
+    color: white;
+}
+
+
+.btn1{
+    background-color: orange;
+    color: #fff;
+    font-weight:bold ;
+    border: none;
+    padding: 10px;
+    margin-left: 10px;
+
+}
+.btn2{
+    background-color: orange;
+    color: #fff;
+    font-size:2rem;
+    font-weight:bold ;
+    border: none;
+    padding: 0.4rem;
+    margin-top: 20px;
+    height: 100px;
+    width: 60%;
+}
+
+
+.main-con{
+    background-color: brown;
+}
+.con2{
+    /* background-color: red; */
+    margin-top: 50px;
+}
+.in-text{
+    margin-top: 20px;
+    
+}
+
+
+.main-text1{
+    padding: 0;
+}
+
+.main-text1 .text1{
+
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: orange;
+  font-size: 2rem;
+  letter-spacing: 0.2px;
+}
+
+.text2{
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color:white;
+  font-size: 3.5rem;
+  letter-spacing: 0;
+}
+
+
+
+
+
+.main-text3 p{
+    font-size: 1.5rem;
+    color: #e4cfba;
+    letter-spacing: 0;
+}
+
+/* card */
+
+.my-con{
+    background-color: #f9f6f0;
+}
+
+.my{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+
+.sizei{
+   
+    padding: 20px;
+   font-size: 2rem;
+   display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    text-align: center;
+
+    height: 550px;
+    width: 280px;
+
+    background-color: white;
+
+    margin-top: 5%;
+   margin-bottom: 5%;
+}
+
+.sizei:hover{
+    background-color: orange;
+    color: white;
+    transition: all 1s ease-in-out;
+}
+
+
+/* hero section 2 */
+
+
+span{
+    color: orange;
+}
+
+
+.btn3{
+    background-color: orange;
+    color: #fff;
+    font-weight:bold ;
+    border: none;
+    padding: 10px;
+    margin: 20px 0;
+
+
+
+}
+
+.hero-text{
+    padding: 40px;
+}
+
+/* her0 sec -3 */
+
+
+.my-con3{
+    background-color: #f9f6f0; 
+    padding: 50px;
+    
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.text-content{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+
+
+}
+
+.popular-dishes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.food-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0;
+    
+}
+
+
+.card-img{
+    
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.card-img img{
+    height: 90%;
+    width: 90%;
+}
+.card{
+    margin: 10px 0;
+    height: auto;
+    width: auto;
+}
+
+.card-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+
+.card:hover{
+    
+    background-color: orange;
+    color: white;
+    transition: all 1s ease-in-out;
+}
+
+.price:hover{
+    color: black;
+}
+
+/*  */
+
+
+.hero-text-left{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    letter-spacing: 0.3px;
+}
+
+.hero-banner-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-banner-right img{
+    height: 90%;
+    width: 80%;
+
+}
+
+
+
+
+
+
+.main-con5{
+    background-image: url("./images/delivery-banner-bg.png");
+    background-size: cover;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.delivery-boy-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.delivery-boy-div img{
+    height: auto;
+    width: 85%;
+}
+
+
+.myrow5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner-img{
+    height: 250px;
+    width: 320px;
+    object-fit: cover;
+    display: flex;
+}
+.banner-img1{
+    height: 250px;
+    width: 320px;
+    object-fit: cover;
+    margin-left: 55px;
+    display: flex;
+}
+
+
+
+.box1{
+    height: 500px;
+    width: 100%;
+    background-color: red;
+    padding-right: 0;
+    margin-bottom: 10px;
+}
+
+.box2{
+    height: 230px;
+    width: 100%;
+    background-color:green;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+
+
+.box3{
+    height: 260px;
+    width: 100%;
+    padding: 0;
+    background-color: rgb(4, 0, 255);
+}
+
+
+.foot-img{
+    background-image: url(./images/footer-illustration.png);
+    background-size: cover;
+    background-repeat: none;
+    height: 60vh;
+}
+
+.foot-con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.bike{
+    animation: ride  7s linear infinite ;
+}
+.bike{
+    height: 100px;
+    width: 240px;
+    position: absolute;
+    bottom: 0;
+    
+}
+.foot2{
+    background-color: #ccc;
+    color: black;
+    font-weight: bold;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+}
+
+.icons{
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.icons:hover{
+    
+    color: orange;
+}
+
+
+
+@keyframes ride {
+    0%{
+        left: 0;
+    }
+
+    100%{
+        left:100%
+    
+    }
+
+}
+
+
+
+
+    

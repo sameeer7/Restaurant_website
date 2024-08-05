@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <title>Form</title>
+    <style>
+        body{
+            
+           
+            /* background-color: rgb(0, 191, 255); */
+            background-size: cover;
+            color: black;
+            
+            font-family: roboto;
+            
+        }
+        .container-fluid{
+            background-image: url(./hero-bg.jpg);
+        }
+
+        .dot{
+            color: orange;
+            font-size: 3rem;
+
+        }
+                
+        .mynav{
+            overflow: hidden;
+            background-image: url(./hero-bg.jpg);
+        }
+
+        .mynav a {
+            float: left;
+            color:white;
+            text-align: center;
+            padding:0px 40px 0px 40px;
+            text-decoration: none;
+            font-size: 30px;
+            
+        }
+        .mynav2 {
+            float: right;
+            text-align: center;
+            margin:20px;
+        } 
+        .btn:hover{
+            background-color: rgba(165, 42, 42, 0.914);
+        }
+ 
+        h1{
+            font-family: roboto;
+            text-align: center;
+            color: white;
+        }
+        .padd {
+            padding-top: 15px;
+            padding-bottom: 15px;  
+        }
+        .al {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            
+        }
+        .btn{
+            background-color:brown;
+            color: white;
+            border: 0cap;
+            height: 42px;
+            width: 50%;
+            font-size:22px;
+            font-weight: bold;
+           
+        }
+       form{
+        background-color: white;
+        border-radius: 15px;
+        padding: 15px;
+       }
+
+       #passwordForm{
+        padding: 30px;
+       }
+
+       .brc{
+        border-color: black;
+       }
+       .weak {
+            color: red;
+        }
+        .medium {
+            color: orange;
+        }
+        .strong {
+            color: green;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div class="mynav">
+        <a href=""> Foodie<span class="dot">.</span></a>
+         <div class="mynav2">
+           <a href="../index.html">Home</a>
+         </div> 
+       </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 padd">
+                <h1>Registration Form</h1>
+                <form id="passwordForm" class="form-group" name="Registration" method="post" action="Myform.html" onsubmit="return show()">
+                    <div class="row padd">
+                        <div class="col-md-6">
+                            <label for="firstname"><span id="me1"></span>*Firstname</label>
+                            <input class="form-control brc" type="text" name="firstname" id="firstname" placeholder="firstname" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="lastname">Lastname</label>
+                            <input class="form-control brc" type="text" name="lastname" id="lastname" placeholder="lastname">
+                        </div>
+                    </div>
+
+                    <div class="row ">
+                        <div class="col-md-6">
+                            <label for="password"><span id="me2"></span>*Password</label>
+                            <input class="form-control brc" type="password" name="password" id="password" placeholder="password"
+                            onfocus="disppwd()" onblur="verifypwd1()" maxlength="10">
+                            <p id="strengthMessage" class="message"></p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="confirm-password"><span id="me3"></span>*Confirm Password</label>
+                            <input class="form-control brc" type="password" name="confirm-password" id="confirm-password" placeholder="confirm password"   onblur="verifypwd2()" required maxlength="10">
+                            <p id="cpwd"></p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="gmail"><span id="me4"></span>*Gmail Id</label>
+                            <input class="form-control brc" type="email" name="gmail" id="gmail" placeholder="ex:satyammmmm31@gmail.com" required  >
+                        </div>
+                        <div class="col-md-6">
+                            <label for="gender"><span id="me5"></span>*Mobile</label>
+                            <input class="form-control brc" type="text" name="mobile" id="mobile" placeholder=" " required maxlength="10" >
+                        </div>
+                    </div>
+
+                    <div class="row padd">                                        
+                        <div class="col-md-6">
+                            <label for="gender"><span id="me6"></span>*Gender</label>
+                            <select class="form-control brc" name="gender" id="gender" required>
+                                <option value="">Select</option>
+                                <option value="">Male</option>
+                                <option value="">Female</option>
+                              </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="year"><span id="me7"></span>*Year of Passout</label>
+                            <select class="form-control brc" name="year" id="year" required>
+                                <option value="">Select</option>
+                                <option value="">2018</option>
+                                <option value="">2019</option>
+                                <option value="">2020</option>
+                                <option value="">2021</option>
+                                <option value="">2022</option>
+                                <option value="">2023</option>
+                                <option value="">2024</option>
+                                <option value="">2025</option>
+                              </select>
+                        </div>
+                    </div>
+
+                    <div class="row padd">                                        
+                        <div class="col-md-6">
+                            <label for="batch"><span id="me6"></span>*Batch No</label>
+                            <input class="form-control brc" type="text" name="batch" id="batch" placeholder=""  required maxlength="10">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="course"><span id="me7"></span>*Course</label>
+                            <select class="form-control brc" name="course" id="course" required>
+                                <option value="">Select</option>
+                                <option value="">Java Full Stack</option>
+                                <option value="">Python Full Stack</option>
+                                <option value="">Azure DevOps</option>
+                                <option value="">Power BI</option>
+                                <option value="">Data Science</option>
+                               </select>
+                        </div>
+                    </div>
+                    <div class="row al">
+                        <button type="submit" class="btn  ">SUBMIT</button>
+                    </div>
+                </form>
+                <div class="al">
+                    <p id="p1"> </p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+
+<script>
+        //password validation 
+        document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('passwordForm');
+    const passwordInput = document.getElementById('password');
+    const strengthMessage = document.getElementById('strengthMessage');
+
+    
+
+    passwordInput.addEventListener('input', () => {
+        const password = passwordInput.value;
+        const strength = getPasswordStrength(password);
+
+        strengthMessage.style.display = 'block';
+        strengthMessage.textContent = `  ${strength}`;
+        strengthMessage.className = `message ${strength.toLowerCase()}`;
+    });
+
+    function getPasswordStrength(password) {
+        const minLength = 6;
+        const hasLowerCase = /[a-z]/.test(password);
+        const hasUpperCase = /[A-Z]/.test(password);
+        const hasNumber = /\d/.test(password);
+        const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+        if (password.length >= minLength && hasLowerCase && hasUpperCase && hasNumber && hasSpecialChar) {
+            return 'Strong';
+        } else if (password.length >= minLength && ((hasLowerCase && hasUpperCase) || (hasLowerCase && hasNumber) || (hasUpperCase && hasNumber) || (hasLowerCase && hasSpecialChar) || (hasUpperCase && hasSpecialChar) || (hasNumber && hasSpecialChar))) {
+            return 'Medium';
+        } else {
+            return 'Weak';
+        }
+    }
+});
+
+
+ //onblur
+ function verifypwd1(){
+        // document.getElementById("pwd").innerHTML = "";
+        document.getElementById("strengthMessage").innerHTML = "";
+
+        
+     }
+
+function verifypwd2(){
+        var pwd = document.getElementById("password").value;
+        var cpwd = document.getElementById("confirm-password").value;
+        if(pwd==cpwd&&cpwd!=""){ 
+        document.getElementById("cpwd").innerHTML = "Password and Confirm Password Matched";
+        document.getElementById("cpwd").style.color = "green";
+        }
+        else{
+            document.getElementById("cpwd").innerHTML = "Password and Confirm Password Not Matched"; 
+            document.getElementById("cpwd").style.color = "red";
+        }
+ }
+    //submit
+    function show() {    
+        var pass = document.getElementById("password").value;
+        var cpass = document.getElementById("confirm-password").value;
+
+        if ( pass != cpass) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    //onfocus
+    function disppwd(){
+        document.getElementById("pwd").innerHTML = "Password must be characters only";
+        document.getElementById("pwd").style.color = "green";
+        document.getElementById("cpwd").innerHTML = "";
+
+   
+    }
+     // keypress functions.........
+      //firstname
+      document.getElementById("firstname").addEventListener("keypress",meth1);
+     function meth1(event){
+        var n1 = event.which;
+        if(!((n1>=65&&n1<=90)||(n1>=97&&n1<=122)||n1==0||n1==8||n1==32)){
+            event.preventDefault();
+        }
+     }
+
+     //lastname
+     document.getElementById("lastname").addEventListener("keypress",meth1);
+     function meth1(event){
+        var n1 = event.which;
+        if(!((n1>=65&&n1<=90)||(n1>=97&&n1<=122)||n1==0||n1==8||n1==32)){
+            event.preventDefault();
+        }
+     }
+     //mobile
+     document.getElementById("mobile").addEventListener("keypress",meth3);
+     function meth3(event){
+        var n1 = event.which;
+        if(!((n1>=48&&n1<=57)||n1==0||n1==8||n1==32)){
+            event.preventDefault();
+        }
+     }
+
+     //batch
+     document.getElementById("batch").addEventListener("keypress",meth4);
+     function meth4(event){
+        var n1 = event.which;
+        if(!((n1>=48&&n1<=57)||n1==0||n1==8||n1==32)){
+            event.preventDefault();
+        }
+     }
+        
+</script>
+</html>

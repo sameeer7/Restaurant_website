@@ -1,0 +1,178 @@
+@media screen and (max-width:960px) {
+    .menu-icon{
+        display: block;
+    }
+
+    #mynav-items{
+        display: none;
+        /* position: absolute;
+        top: 70px;
+        width: 100%;
+        background: brown;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 2;
+        padding: 20px;
+        overflow: hidden; */
+    }
+
+   .btn2{
+    height: auto;
+    width: auto;
+    font-size: 1.8rem;
+    padding: 20px;
+   }
+    
+    #hero-section{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .hero-left{
+        text-align: center;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+    }
+    .main-text1{
+        margin: 0;
+    }
+
+    .sizei{
+   
+        padding: 40px 10px;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        /* height: 100%;
+        width: 100%; */
+        text-align: center;
+        background-color: white;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .image1 img{
+        height: 95%;
+        background-size: cover;
+    }
+
+    .image2 img{
+        height:100%;
+        width: 100%;
+        background-size: cover;
+    }
+
+    .hero-text h1{
+        margin-bottom: 20px;
+    }
+    .hero-text p{
+        margin-bottom: 20px;
+    }
+
+    .food-item-names{
+        margin-bottom: 20px;
+    }
+    .hero-text{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    .box2{
+        height: auto;
+        width: 100%;
+    }
+
+    .hero-text-left{
+        text-align: center;
+    }
+
+    .hero-text p{
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .foot-con{
+        height: auto;
+        width: 100%;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-text3{
+        text-align: center;
+    }
+
+    #myrow{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .foot-img{
+        background-image: none;
+    }
+    .foot-cols{
+        text-align: center;
+        padding: 20px;
+    }
+
+
+    .hero-banner-right img {
+        height: auto;
+        width: 100%;
+    }
+
+    
+
+    
+
+    
+
+  
+
+
+}
+
+@media screen and (max-width:480px) {
+
+    .hero-text-left{
+        text-align: center;
+    }
+    
+
+    .foot2 h4{
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .hero-left2 img{
+        height: 100%;
+        width: 100%;
+    }
+
+    .hero-right2 .hero-text{
+        text-align: center;
+    }
+
+    .hero-banner-right img {
+        height: auto;
+        width: 100%;
+    }
+}
